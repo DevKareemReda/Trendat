@@ -1,0 +1,250 @@
+/* _____ Import files _____ */
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* _____ style all rules _____ */
+:root {
+  --main-color: #;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Jost", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+span,
+a {
+  display: inline-block;
+}
+
+img {
+  vertical-align: middle;
+}
+
+input,
+select,
+button {
+  font-family: inherit;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.img-fluid {
+  max-width: 100%;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.btn {
+  padding: 9px 18px;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn-white {
+  background: #fff;
+}
+
+.btn-gray {
+  background-color: #f1f1f9;
+  border-radius: 5px;
+}
+
+.btn-black {
+  background-color: #000;
+  color: #fff;
+}
+
+/* _____  _____ */
+header {
+  background-color: #333;
+}
+.logo img {
+  width: 150px;
+  margin-right: 25px;
+}
+header input {
+  width: 100%;
+  padding: 9px 18px;
+  border: none;
+  background-color: #fff;
+  border-bottom: 2px solid #000;
+  outline: none;
+  border-radius: 25px;
+}
+header .nav a {
+  padding: 25px 25px;
+  color: #fff;
+}
+header .nav a:hover {
+  background-color: #8f8f8f;
+}
+header .icons-cart {
+  margin-top: 13px;
+}
+header .icons-cart li {
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 20px;
+}
+header .fa-magnifying-glass {
+  position: absolute;
+  top: 27px;
+  right: 15px;
+  font-size: 15px;
+}
+/* _____  _____ */
+
+.product-desc-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s ease-in-out;
+  color: #fff;
+}
+
+.product-inner:hover .product-desc-inner {
+  top: 0;
+  right: 0;
+  left: 0;
+  transform: translate(0, 0);
+}
+
+.product-desc h3 {
+  font-size: 25px;
+}
+
+.product-desc .product-btn {
+  position: absolute;
+  bottom: -100%;
+  width: 100%;
+  left: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.product-desc .product-btn button {
+  width: calc(50% - 20px);
+}
+
+.product-inner:hover .product-btn {
+  bottom: 25px;
+}
+.sec-hero {
+  background: url(https://devkareemreda.github.io/Minimal_Store/images/slider_03.jpg) center center / cover no-repeat;
+  height: 100vh;
+}
+/* _____  _____ */
+.new-desc {
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  left: 0;
+  color: #fff;
+  text-align: center;
+}
+
+/* _____  _____ */
+.brands img {
+  filter: grayscale(100%);
+}
+
+/* _____  _____ */
+.imageSize {
+    height: 250px !important;
+}
+.discount {
+  color: #f00;
+  text-decoration: line-through;
+}
+.trends-desc span {
+  background-color: #f00;
+  color: #fff;
+  border-radius: 4px;
+  padding: 4px 7px;
+}
+/* _____  _____ */
+.img-sec {
+  background: url(https://trendatt.com/assets/images/student/cover_17336615442759026.jpeg) center center / cover no-repeat;
+  padding: 100px 0;
+}
+
+/* _____  _____ */
+.feateures-inner {
+  position: absolute;
+  bottom: 10px;
+  color: #fff;
+  width: 100%;
+  padding: 15px;
+}
+
+.contact input {
+  width: 80%;
+  padding: 9px 18px;
+  border: none;
+  background-color: #fff;
+  border-bottom: 2px solid #000;
+  outline: none;
+}
+
+.contact-inner {
+  background-color: #f9f9f1;
+}
+.contact a {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.contact-social li:first-child {
+  background-color: #1877f2;
+}
+
+
+.contact-social li:nth-child(2) {
+  background-color: #c32aa3;
+}
+
+
+.contact-social li:last-child {
+  background-color: #fffc00;
+}
+
+.contact-social li {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  justify-content: center;
+  margin-right: 40px;
+}
