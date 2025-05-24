@@ -71,7 +71,7 @@ button {
 }
 
 .btn-white {
-  background: #fff;
+  background-color: #f1f1f9;
 }
 
 .btn-gray {
@@ -87,6 +87,7 @@ button {
 /* _____  _____ */
 header {
   background-color: #333;
+  position: relative;
 }
 .logo img {
   width: 150px;
@@ -122,6 +123,20 @@ header .fa-magnifying-glass {
   right: 15px;
   font-size: 15px;
 }
+header ul ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s ease-in-out;
+}
+header ul li:hover ul {
+  opacity: 1;
+  visibility: visible;
+}
 /* _____  _____ */
 
 .product-desc-inner {
@@ -131,7 +146,6 @@ header .fa-magnifying-glass {
   width: 100%;
   transform: translate(-50%, -50%);
   transition: 0.3s ease-in-out;
-  color: #fff;
 }
 
 .product-inner:hover .product-desc-inner {
@@ -161,8 +175,9 @@ header .fa-magnifying-glass {
   bottom: 25px;
 }
 .sec-hero {
-  background: url(https://devkareemreda.github.io/Minimal_Store/images/slider_03.jpg) center center / cover no-repeat;
-  height: 100vh;
+  background: url(../images/slider_01.jpg) center center;
+  background-size: cover;
+  height: calc(100vh - 43px);
 }
 /* _____  _____ */
 .new-desc {
@@ -195,8 +210,8 @@ header .fa-magnifying-glass {
 }
 /* _____  _____ */
 .img-sec {
-  background: url(https://trendatt.com/assets/images/student/cover_17336615442759026.jpeg) center center / cover no-repeat;
-  padding: 100px 0;
+  background: url(../images/img-sec.jpg) center center / cover no-repeat;
+  padding: 150px 0;
 }
 
 /* _____  _____ */
