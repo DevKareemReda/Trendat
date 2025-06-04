@@ -312,8 +312,6 @@ const brands = [
 ];
 
 brands.map(items=> {
-  console.log(items.name);
-  console.log(items.image);
   let html = "";
   html = `
     <div class="col-md-3">
@@ -326,7 +324,7 @@ brands.map(items=> {
   document.querySelector(".brand-inner").innerHTML += html
 })
 
-let shopping = document.querySelector(".fa-cart-shopping");
+let shopping = document.querySelector(".shopping");
 let closeShopping = document.querySelector(".cart-overlay .close");
 let cartOverlay = document.querySelector(".cart-overlay")
 let cartInner = document.querySelector(".cart-inner")
