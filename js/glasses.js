@@ -1,66 +1,108 @@
-const products = [
+const glasses = [
   {
-    title: "Tawaq Perfume - Mechanos",
-    price: "35",
-    image: "https://trendatt.com/assets/images/products/min/image_67bb93dcdc88b4046.jpeg",
-    url: "https://trendatt.com/ar/product/18330",
-    soldOut: true,
+    id: 16934,
+    title: "USUVU-Vinci - Light Gold Black Smoke",
+    image: "https://trendatt.com/assets/images/products/min/image_676b170f07cd17096.jpeg",
+    price: "15 ",
+    url: "https://trendatt.com/ar/product/16934"
   },
   {
-    title: "Tawaq Perfume - Peacock",
-    price: "35",
-    image: "https://trendatt.com/assets/images/products/min/image_67bb92fee12df7222.jpeg",
-    url: "https://trendatt.com/ar/product/18329",
-    soldOut: false,
+    id: 16937,
+    title: "USUVU- Eternally - Silver Gradient Pink",
+    image: "https://trendatt.com/assets/images/products/min/image_676b1b75afefc3506.jpeg",
+    price: "15 ",
+    url: "https://trendatt.com/ar/product/16937"
   },
   {
-    title: "Tawaq Perfume - Fine",
-    price: "35",
-    image: "https://trendatt.com/assets/images/products/min/image_67bb926c3360e1808.jpeg",
-    url: "https://trendatt.com/ar/product/18328",
-    soldOut: true,
+    id: 16932,
+    title: "USUVU-DOME-Black Smoke",
+    image: "https://trendatt.com/assets/images/products/min/image_676b14548e30f1518.jpeg",
+    price: "15 ",
+    url: "https://trendatt.com/ar/product/16932"
   },
   {
-    title: "Tawaq Perfume - Oudy",
-    price: "20",
-    image: "https://trendatt.com/assets/images/products/min/image_67bb91ca0a1913916.jpeg",
-    url: "https://trendatt.com/ar/product/18327",
-    soldOut: false,
+    id: 8841,
+    title: "Spirit felici CHARMED",
+    image: "https://trendatt.com/assets/images/products/min/image_66977dab2f29d6023.png",
+    price: "25 ",
+    url: "https://trendatt.com/ar/product/8841"
   },
   {
-    title: "Tawaq Perfume - Shaky",
-    price: "50",
-    image: "https://trendatt.com/assets/images/products/min/image_67bb912bcc7e13946.jpeg",
-    url: "https://trendatt.com/ar/product/18326",
-    soldOut: false,
+    id: 8864,
+    title: "Spirit felici CORNERS",
+    image: "https://trendatt.com/assets/images/products/min/image_6698d2ba082a08475.jpeg",
+    price: "25 ",
+    url: "https://trendatt.com/ar/product/8864"
+  },
+    {
+    id: 16936,
+    title: "USUVU- Visi - Gold Gradient Smoke",
+    price: "15 ",
+    image: "https://trendatt.com/assets/images/products/min/image_676b19f70abbd2596.jpeg",
+    link: "https://trendatt.com/ar/product/16936",
+    soldOut: true
   },
   {
-    title: "Tawaq Perfume - Sold",
-    price: "50",
-    image: "https://trendatt.com/assets/images/products/min/image_67bb8fb669b626978.jpeg",
-    url: "https://trendatt.com/ar/product/18325",
-    soldOut: false,
+    id: 16933,
+    title: "USUVU-Dex - Matt Black Smoke",
+    price: "15 ",
+    image: "https://trendatt.com/assets/images/products/min/image_676b160d871c14116.jpeg",
+    link: "https://trendatt.com/ar/product/16933",
+    soldOut: false
   },
   {
-    title: "Tawaq Perfume - Soul",
-    price: "50",
-    image: "https://trendatt.com/assets/images/products/min/image_67bb8ece20f275613.jpeg",
-    url: "https://trendatt.com/ar/product/18324",
-    soldOut: false,
+    id: 16939,
+    title: "USUVU- Yoyo(s) - Black Yellow",
+    price: "15 ",
+    image: "https://trendatt.com/assets/images/products/min/image_676b1d22c819b7750.jpeg",
+    link: "https://trendatt.com/ar/product/16939",
+    soldOut: false
+  },
+  {
+    id: 16935,
+    title: "USUVU- Aura - Gold Light Smoke",
+    price: "15 ",
+    image: "https://trendatt.com/assets/images/products/min/image_676b18cb7bf233942.jpeg",
+    link: "https://trendatt.com/ar/product/16935",
+    soldOut: false
+  },
+  {
+    id: 16941,
+    title: "USUVU-Gradient Blue Smoke",
+    price: "15 ",
+    image: "https://trendatt.com/assets/images/products/min/image_676b1eb4b2f9e2634.jpeg",
+    link: "https://trendatt.com/ar/product/16941",
+    soldOut: false
+  },
+  {
+    id: 8848,
+    title: "Spirit felici Sunkissed",
+    price: "25 ",
+    image: "https://trendatt.com/assets/images/products/min/image_6697af1e3d3326353.jpeg",
+    link: "https://trendatt.com/ar/product/8848",
+    soldOut: false
+  },
+  {
+    id: 16938,
+    title: "USUVU- Pukka(s) - Tortoise Brown",
+    price: "25 ",
+    image: "https://trendatt.com/assets/images/products/min/image_676b1c5543d5a8197.jpeg",
+    link: "https://trendatt.com/ar/product/16938",
+    soldOut: false
   }
 ];
 
 
-products.map(items=> {
+glasses.map(items=> {
   let html = "";
   html = `
-          <div class="col-md-3 col-6 mt-4">
+          <div class="col-md-3 col-6 my-3">
             <div class="brand-card">
             <div class="overflow-hidden">
               <a href="details.html"><img src="${items.image}" class="img-fluid" alt=""></a>
               </div>
               <div class="py-3">
-                             <a href="details.html">${items.title}</a>
+              <a href="details.html">${items.title.split(" ", 4).join(" ")}...</a>
               <p class="mt-2">${items.price} KWD</p>
               <div class="d-flex align-items-center justify-content-between mt-4">
               <button class="btn btn-black">Buy Now</button>
@@ -82,20 +124,5 @@ products.map(items=> {
             </div>
           </div>
   `
-  document.querySelector(".brand-parent").innerHTML += html
+  document.querySelector(".glasses").innerHTML += html
 })
-
-
-let shopping = document.querySelector(".shopping");
-let closeShopping = document.querySelector(".cart-overlay .close");
-let cartOverlay = document.querySelector(".cart-overlay")
-let cartInner = document.querySelector(".cart-inner")
-shopping.onclick = function () {
-  cartOverlay.classList.add("active")
-  cartInner.classList.add("active")
-}
-
-closeShopping.onclick = function () {
-  cartOverlay.classList.remove("active")
-  cartInner.classList.remove("active")
-}

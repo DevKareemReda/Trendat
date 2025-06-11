@@ -1,66 +1,99 @@
-const products = [
+const recProducts = [
   {
-    title: "Tawaq Perfume - Mechanos",
-    price: "35",
-    image: "https://trendatt.com/assets/images/products/min/image_67bb93dcdc88b4046.jpeg",
-    url: "https://trendatt.com/ar/product/18330",
-    soldOut: true,
+    id: "2344",
+    title: "Mary Glam Nail Polish",
+    image: "https://trendatt.com/assets/images/products/min/image_6603f3dfe35ca6464.png",
+    price: "0.75 ",
+    url: "https://trendatt.com/ar/product/2344"
   },
   {
-    title: "Tawaq Perfume - Peacock",
-    price: "35",
-    image: "https://trendatt.com/assets/images/products/min/image_67bb92fee12df7222.jpeg",
-    url: "https://trendatt.com/ar/product/18329",
-    soldOut: false,
+    id: "10850",
+    title: "Sensai Lasting Plump",
+    image: "https://trendatt.com/assets/images/products/min/image_66d2fd465c6b37894.jpeg",
+    price: "14.5 ",
+    url: "https://trendatt.com/ar/product/10850"
   },
   {
-    title: "Tawaq Perfume - Fine",
-    price: "35",
-    image: "https://trendatt.com/assets/images/products/min/image_67bb926c3360e1808.jpeg",
-    url: "https://trendatt.com/ar/product/18328",
-    soldOut: true,
+    id: "6109",
+    title: "Ariess Limited Green",
+    image: "https://trendatt.com/assets/images/products/min/image_6659d056989d83664.jpeg",
+    price: "98.15 ",
+    url: "https://trendatt.com/ar/product/6109"
   },
   {
-    title: "Tawaq Perfume - Oudy",
-    price: "20",
-    image: "https://trendatt.com/assets/images/products/min/image_67bb91ca0a1913916.jpeg",
-    url: "https://trendatt.com/ar/product/18327",
-    soldOut: false,
+    id: "15398",
+    title: "NIP+FAB Purify",
+    image: "https://trendatt.com/assets/images/products/min/image_6744c7b6731c43812.jpeg",
+    price: "8 ",
+    url: "https://trendatt.com/ar/product/15398"
   },
   {
-    title: "Tawaq Perfume - Shaky",
-    price: "50",
-    image: "https://trendatt.com/assets/images/products/min/image_67bb912bcc7e13946.jpeg",
-    url: "https://trendatt.com/ar/product/18326",
-    soldOut: false,
+    id: "6114",
+    title: "Rozva Gold Women",
+    image: "https://trendatt.com/assets/images/products/min/image_6659d40142f985259.jpeg",
+    price: "71.47 ",
+    url: "https://trendatt.com/ar/product/6114"
   },
   {
-    title: "Tawaq Perfume - Sold",
-    price: "50",
-    image: "https://trendatt.com/assets/images/products/min/image_67bb8fb669b626978.jpeg",
-    url: "https://trendatt.com/ar/product/18325",
-    soldOut: false,
+    id: "15044",
+    title: "AXIS-Y Biome Cream",
+    image: "https://trendatt.com/assets/images/products/min/image_6741bf8dd54dc3574.jpeg",
+    price: "11.3 ",
+    url: "https://trendatt.com/ar/product/15044"
   },
   {
-    title: "Tawaq Perfume - Soul",
-    price: "50",
-    image: "https://trendatt.com/assets/images/products/min/image_67bb8ece20f275613.jpeg",
-    url: "https://trendatt.com/ar/product/18324",
-    soldOut: false,
+    id: "3088",
+    title: "New Smart Toothpaste",
+    image: "https://trendatt.com/assets/images/products/min/image_662386dee11798694.jpeg",
+    price: "2.1 ",
+    url: "https://trendatt.com/ar/product/3088"
+  },
+  {
+    id: "15300",
+    title: "NIP + FAB Hydrate Fix",
+    image: "https://trendatt.com/assets/images/products/min/image_674411b544a583975.jpeg",
+    price: "15 ",
+    url: "https://trendatt.com/ar/product/15300"
+  },
+  {
+    id: "15372",
+    title: "COSRX Charcoal Mask",
+    image: "https://trendatt.com/assets/images/products/min/image_6744a5a3bd3cb2551.jpeg",
+    price: "9 ",
+    url: "https://trendatt.com/ar/product/15372"
+  },{
+    id: "16487",
+    title: "Fresh Line - Hair Care Set",
+    image: "https://trendatt.com/assets/images/products/min/image_6755eca3280558730.jpeg",
+    price: "9.2 ",
+    url: "https://trendatt.com/ar/product/16487"
+  },
+  {
+    id: "12483",
+    title: "NAJ OLEARI - Lip Gloss",
+    image: "https://trendatt.com/assets/images/products/min/image_66f8ca4c09c482160.jpeg",
+    price: "6 ",
+    url: "https://trendatt.com/ar/product/12483"
+  },
+  {
+    id: "12205",
+    title: "BU - Herbal Massage Oil",
+    image: "https://trendatt.com/assets/images/products/min/image_66f2c27b3bffb6023.jpeg",
+    price: "13 ",
+    url: "https://trendatt.com/ar/product/12205"
   }
 ];
 
-
-products.map(items=> {
+recProducts.map(items=> {
   let html = "";
   html = `
-          <div class="col-md-3 col-6 mt-4">
+          <div class="col-md-3 col-6 my-3">
             <div class="brand-card">
             <div class="overflow-hidden">
               <a href="details.html"><img src="${items.image}" class="img-fluid" alt=""></a>
               </div>
               <div class="py-3">
-                             <a href="details.html">${items.title}</a>
+                             <a href="details.html">${items.title.split(" ", 2).join(" ")}</a>
               <p class="mt-2">${items.price} KWD</p>
               <div class="d-flex align-items-center justify-content-between mt-4">
               <button class="btn btn-black">Buy Now</button>
@@ -82,20 +115,5 @@ products.map(items=> {
             </div>
           </div>
   `
-  document.querySelector(".brand-parent").innerHTML += html
+  document.querySelector(".recommendedProducts").innerHTML += html
 })
-
-
-let shopping = document.querySelector(".shopping");
-let closeShopping = document.querySelector(".cart-overlay .close");
-let cartOverlay = document.querySelector(".cart-overlay")
-let cartInner = document.querySelector(".cart-inner")
-shopping.onclick = function () {
-  cartOverlay.classList.add("active")
-  cartInner.classList.add("active")
-}
-
-closeShopping.onclick = function () {
-  cartOverlay.classList.remove("active")
-  cartInner.classList.remove("active")
-}

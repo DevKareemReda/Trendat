@@ -1,60 +1,129 @@
-const products = [
+const perfumes = [
   {
-    title: "Tawaq Perfume - Mechanos",
-    price: "35",
-    image: "https://trendatt.com/assets/images/products/min/image_67bb93dcdc88b4046.jpeg",
-    url: "https://trendatt.com/ar/product/18330",
-    soldOut: true,
+    id: 18844,
+    title: "Davidoff Horizon Perfume",
+    image: "https://trendatt.com/assets/images/products/min/image_68331627588981199.jpeg",
+    price: "17.9 ",
+    url: "https://trendatt.com/ar/product/18844",
+    status: "available"
+  },
+ {
+    id: 18819,
+    title: "CK Escape for Women",
+    price: "16.25 ",
+    image: "https://trendatt.com/assets/images/products/min/image_6832f22ee2b074821.jpeg",
+    link: "https://trendatt.com/ar/product/18819",
+    soldOut: false
   },
   {
-    title: "Tawaq Perfume - Peacock",
-    price: "35",
-    image: "https://trendatt.com/assets/images/products/min/image_67bb92fee12df7222.jpeg",
-    url: "https://trendatt.com/ar/product/18329",
-    soldOut: false,
+    id: 18958,
+    title: "Grey Flannel Eau de Toilette",
+    image: "https://trendatt.com/assets/images/products/min/image_683707547ccbb2175.jpeg",
+    price: "16.8 ",
+    url: "https://trendatt.com/ar/product/18958",
+    status: "available"
   },
   {
-    title: "Tawaq Perfume - Fine",
-    price: "35",
+    id: 18938,
+    title: "Clinique Happy Heart for Women",
+    image: "https://trendatt.com/assets/images/products/min/image_6835bbdac67795409.jpeg",
+    price: "16.8 ",
+    url: "https://trendatt.com/ar/product/18938",
+    status: "available"
+  },
+  {
+    id: 12740,
+    title: "INITIO - Eau de Parfum",
+    price: "145 ",
+    image: "https://trendatt.com/assets/images/products/min/image_66fe80cd109ed8058.jpeg",
+    link: "https://trendatt.com/ar/product/12740",
+    soldOut: false
+  },
+  {
+    id: 18942,
+    title: "Roberto Cavalli Just",
+    price: "16.25 ",
+    image: "https://trendatt.com/assets/images/products/min/image_6836e1ef029315387.jpeg",
+    link: "https://trendatt.com/ar/product/18942",
+    soldOut: false
+  },
+  {
+    id: 18328,
+    title: "Tawaq - Fine Fragrance",
+    price: "35 ",
     image: "https://trendatt.com/assets/images/products/min/image_67bb926c3360e1808.jpeg",
-    url: "https://trendatt.com/ar/product/18328",
-    soldOut: true,
+    link: "https://trendatt.com/ar/product/18328",
+    soldOut: true
   },
   {
-    title: "Tawaq Perfume - Oudy",
-    price: "20",
-    image: "https://trendatt.com/assets/images/products/min/image_67bb91ca0a1913916.jpeg",
-    url: "https://trendatt.com/ar/product/18327",
-    soldOut: false,
+    id: 18455,
+    title: "Ajmal - Lady Fresh Set",
+    price: "9.5 ",
+    image: "https://trendatt.com/assets/images/products/min/image_67f7b3d4c7e108111.jpeg",
+    link: "https://trendatt.com/ar/product/18455",
+    soldOut: false
+  },
+{
+    id: 18596,
+    title: "Atelier - Rêve de Mer",
+    price: "92.25",
+    image: "https://trendatt.com/assets/images/products/min/image_68137075e05fa2403.jpeg",
+    link: "https://trendatt.com/ar/product/18596",
+    soldOut: false
   },
   {
-    title: "Tawaq Perfume - Shaky",
-    price: "50",
-    image: "https://trendatt.com/assets/images/products/min/image_67bb912bcc7e13946.jpeg",
-    url: "https://trendatt.com/ar/product/18326",
-    soldOut: false,
+    id: 19050,
+    title: "Dolce & Gabbana - King",
+    price: "23.4",
+    image: "https://trendatt.com/assets/images/products/min/image_683c5b288d28e1950.jpeg",
+    link: "https://trendatt.com/ar/product/19050",
+    soldOut: false
   },
   {
-    title: "Tawaq Perfume - Sold",
-    price: "50",
-    image: "https://trendatt.com/assets/images/products/min/image_67bb8fb669b626978.jpeg",
-    url: "https://trendatt.com/ar/product/18325",
-    soldOut: false,
+    id: 18842,
+    title: "Davidoff - Cool Water",
+    price: "15.7",
+    image: "https://trendatt.com/assets/images/products/min/image_6833142aa6c9e1021.jpeg",
+    link: "https://trendatt.com/ar/product/18842",
+    soldOut: false
   },
   {
-    title: "Tawaq Perfume - Soul",
-    price: "50",
-    image: "https://trendatt.com/assets/images/products/min/image_67bb8ece20f275613.jpeg",
-    url: "https://trendatt.com/ar/product/18324",
-    soldOut: false,
+    id: 12351,
+    title: "MISSONI - Women's Gift Set",
+    price: "27",
+    image: "https://trendatt.com/assets/images/products/min/image_66f477ea8d4188818.jpeg",
+    link: "https://trendatt.com/ar/product/12351",
+    soldOut: true
+  },
+  {
+    id: 12852,
+    title: "LIQUIDES IMAGINAIRES",
+    price: "64.75",
+    image: "https://trendatt.com/assets/images/products/min/image_67018a8c6af796967.jpeg",
+    url: "https://trendatt.com/ar/product/12852"
+  },
+  {
+    id: 18977,
+    title: "S.T. DUPONT ESSENCE",
+    price: "16.8",
+    image: "https://trendatt.com/assets/images/products/min/image_68383b5501eb07079.jpeg",
+    url: "https://trendatt.com/ar/product/18977"
+  },
+  {
+    id: 12853,
+    title: "LIQUIDES IMAGINAIRES",
+    price: "64.75",
+    image: "https://trendatt.com/assets/images/products/min/image_67018c6b731f07861.jpeg",
+    url: "https://trendatt.com/ar/product/12853"
   }
 ];
 
 
-products.map(items=> {
+
+perfumes.map(items=> {
   let html = "";
   html = `
-          <div class="col-md-3 col-6 mt-4">
+          <div class="col-md-3  col-6  my-5">
             <div class="brand-card">
             <div class="overflow-hidden">
               <a href="details.html"><img src="${items.image}" class="img-fluid" alt=""></a>
@@ -82,20 +151,5 @@ products.map(items=> {
             </div>
           </div>
   `
-  document.querySelector(".brand-parent").innerHTML += html
+  document.querySelector(".perfumes").innerHTML += html
 })
-
-
-let shopping = document.querySelector(".shopping");
-let closeShopping = document.querySelector(".cart-overlay .close");
-let cartOverlay = document.querySelector(".cart-overlay")
-let cartInner = document.querySelector(".cart-inner")
-shopping.onclick = function () {
-  cartOverlay.classList.add("active")
-  cartInner.classList.add("active")
-}
-
-closeShopping.onclick = function () {
-  cartOverlay.classList.remove("active")
-  cartInner.classList.remove("active")
-}

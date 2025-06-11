@@ -1,3 +1,11 @@
+let calcHeader = document.querySelector("header");
+
+document.body.style.paddingTop = calcHeader.clientHeight + "px";
+
+window.onresize = function () {
+document.body.style.paddingTop = calcHeader.clientHeight + "px";
+
+}
 
 
 let shoppingCart = document.querySelector(".shopping");

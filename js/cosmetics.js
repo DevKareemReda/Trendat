@@ -1,60 +1,93 @@
-const products = [
+const cosmetics = [
   {
-    title: "Tawaq Perfume - Mechanos",
-    price: "35",
-    image: "https://trendatt.com/assets/images/products/min/image_67bb93dcdc88b4046.jpeg",
-    url: "https://trendatt.com/ar/product/18330",
-    soldOut: true,
+    id: 8102,
+    title: "Revlon - Matte Lipstick",
+    image: "https://trendatt.com/assets/images/products/min/image_6685788cb023c6219.jpeg",
+    price: "4.5 ",
+    url: "https://trendatt.com/ar/product/8102"
   },
   {
-    title: "Tawaq Perfume - Peacock",
-    price: "35",
-    image: "https://trendatt.com/assets/images/products/min/image_67bb92fee12df7222.jpeg",
-    url: "https://trendatt.com/ar/product/18329",
-    soldOut: false,
+    id: 12424,
+    title: "NAJ.OLEARI - Foundation Cream",
+    image: "https://trendatt.com/assets/images/products/min/image_66f80aa5143503304.jpeg",
+    price: "9.25 ",
+    url: "https://trendatt.com/ar/product/12424"
   },
   {
-    title: "Tawaq Perfume - Fine",
-    price: "35",
-    image: "https://trendatt.com/assets/images/products/min/image_67bb926c3360e1808.jpeg",
-    url: "https://trendatt.com/ar/product/18328",
-    soldOut: true,
+    id: 12424,
+    title: "NAJ.OLEARI - Foundation Cream",
+    image: "https://trendatt.com/assets/images/products/min/image_66f80aa5143503304.jpeg",
+    price: "9.25 ",
+    url: "https://trendatt.com/ar/product/12424"
   },
   {
-    title: "Tawaq Perfume - Oudy",
-    price: "20",
-    image: "https://trendatt.com/assets/images/products/min/image_67bb91ca0a1913916.jpeg",
-    url: "https://trendatt.com/ar/product/18327",
-    soldOut: false,
+    id: 10488,
+    title: "SheGlam - Blush Palette",
+    image: "https://trendatt.com/assets/images/products/min/image_66d3047d74b338496.jpeg",
+    price: "2.25 ",
+    url: "https://trendatt.com/ar/product/10488"
   },
   {
-    title: "Tawaq Perfume - Shaky",
-    price: "50",
-    image: "https://trendatt.com/assets/images/products/min/image_67bb912bcc7e13946.jpeg",
-    url: "https://trendatt.com/ar/product/18326",
-    soldOut: false,
+    id: 9736,
+    title: "Pastel ProFashion - Lipstick",
+    image: "https://trendatt.com/assets/images/products/min/image_66b76b4911ddd6513.jpeg",
+    price: "8.75 ",
+    url: "https://trendatt.com/ar/product/9736"
   },
   {
-    title: "Tawaq Perfume - Sold",
-    price: "50",
-    image: "https://trendatt.com/assets/images/products/min/image_67bb8fb669b626978.jpeg",
-    url: "https://trendatt.com/ar/product/18325",
-    soldOut: false,
+    id: 11867,
+    title: "DIEGO DALLA PALMA",
+    image: "https://trendatt.com/assets/images/products/min/image_66eec5c8dbf7c1865.png",
+    price: "7.75 ",
+    url: "https://trendatt.com/ar/product/11867",
+    status: "available"
   },
   {
-    title: "Tawaq Perfume - Soul",
-    price: "50",
-    image: "https://trendatt.com/assets/images/products/min/image_67bb8ece20f275613.jpeg",
-    url: "https://trendatt.com/ar/product/18324",
-    soldOut: false,
+    id: 9741,
+    title: "Express Your Mood",
+    image: "https://trendatt.com/assets/images/products/min/image_66b76f04018631661.png",
+    price: "6.5 ",
+    url: "https://trendatt.com/ar/product/9741",
+    status: "sold out"
+  },
+{
+    id: 7962,
+    title: "Revlon - Matte Lipstick",
+    price: "4 KWD",
+    image: "https://trendatt.com/assets/images/products/min/image_6684138856bf57689.jpeg",
+    url: "https://trendatt.com/ar/product/7962",
+    status: "available"
+  },
+  {
+    id: 12228,
+    title: "NAJ.OLEARI - Hair Conditioner",
+    price: "6 KWD",
+    image: "https://trendatt.com/assets/images/products/min/image_66f3ae153e74d5282.jpeg",
+    url: "https://trendatt.com/ar/product/12228",
+    status: "sold out"
+  },
+  {
+    id: 12105,
+    title: "Mary Glam - Lip Liner",
+    price: "1 KWD",
+    image: "https://trendatt.com/assets/images/products/min/image_66f1451ae89e42976.jpeg",
+    url: "https://trendatt.com/ar/product/12105",
+    status: "available"
+  },
+  {
+    id: 12654,
+    title: "Mary Glam - Mascara Set",
+    price: "1 KWD",
+    image: "https://trendatt.com/assets/images/products/min/image_66fc43075f2ac5698.jpeg",
+    url: "https://trendatt.com/ar/product/12654",
+    status: "available"
   }
 ];
 
-
-products.map(items=> {
+cosmetics.map(items=> {
   let html = "";
   html = `
-          <div class="col-md-3 col-6 mt-4">
+          <div class="col-md-3 col-6 my-3">
             <div class="brand-card">
             <div class="overflow-hidden">
               <a href="details.html"><img src="${items.image}" class="img-fluid" alt=""></a>
@@ -82,20 +115,5 @@ products.map(items=> {
             </div>
           </div>
   `
-  document.querySelector(".brand-parent").innerHTML += html
+  document.querySelector(".cosmetics").innerHTML += html
 })
-
-
-let shopping = document.querySelector(".shopping");
-let closeShopping = document.querySelector(".cart-overlay .close");
-let cartOverlay = document.querySelector(".cart-overlay")
-let cartInner = document.querySelector(".cart-inner")
-shopping.onclick = function () {
-  cartOverlay.classList.add("active")
-  cartInner.classList.add("active")
-}
-
-closeShopping.onclick = function () {
-  cartOverlay.classList.remove("active")
-  cartInner.classList.remove("active")
-}

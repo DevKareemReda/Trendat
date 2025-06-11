@@ -314,7 +314,7 @@ const brands = [
 brands.map(items=> {
   let html = "";
   html = `
-    <div class="col-md-3">
+    <div class="col-md-3 col-6">
       <div class="brand position-relative">
         <img src="${items.image}" class="img-fluid" alt="">
         <a href="brand.html" class="brand-desc btn btn-black">${items.name}</a>

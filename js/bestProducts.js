@@ -1,66 +1,124 @@
-const products = [
+const productsData = [
   {
-    title: "Tawaq Perfume - Mechanos",
-    price: "35",
-    image: "https://trendatt.com/assets/images/products/min/image_67bb93dcdc88b4046.jpeg",
-    url: "https://trendatt.com/ar/product/18330",
-    soldOut: true,
+    id: 10952,
+    title: "IL105 Sensai Red Lipstick",
+    image:
+      "https://trendatt.com/assets/images/products/min/image_66d72b9cc4ad72198.jpeg",
+      price: "22"
   },
   {
-    title: "Tawaq Perfume - Peacock",
-    price: "35",
-    image: "https://trendatt.com/assets/images/products/min/image_67bb92fee12df7222.jpeg",
-    url: "https://trendatt.com/ar/product/18329",
-    soldOut: false,
+    id: 5961,
+    title: "Anti-Aging Flash",
+    image:
+      "https://trendatt.com/assets/images/products/min/image_667e796c8ca1f5588.jpeg",
+      price: "11.97"
   },
   {
-    title: "Tawaq Perfume - Fine",
-    price: "35",
-    image: "https://trendatt.com/assets/images/products/min/image_67bb926c3360e1808.jpeg",
-    url: "https://trendatt.com/ar/product/18328",
-    soldOut: true,
+    id: 3703,
+    title: "18K Necklace 1.2",
+    image:
+      "https://trendatt.com/assets/images/products/min/image_662d69c6662bc5887.jpeg",
+      price: "55.4"
   },
   {
-    title: "Tawaq Perfume - Oudy",
-    price: "20",
-    image: "https://trendatt.com/assets/images/products/min/image_67bb91ca0a1913916.jpeg",
-    url: "https://trendatt.com/ar/product/18327",
-    soldOut: false,
+    id: 18543,
+    title: "TopFace Skin Editor",
+    image:
+      "https://trendatt.com/assets/images/products/min/image_663c440518cf07400.jpeg",
+      price: "1.4"
   },
   {
-    title: "Tawaq Perfume - Shaky",
-    price: "50",
-    image: "https://trendatt.com/assets/images/products/min/image_67bb912bcc7e13946.jpeg",
-    url: "https://trendatt.com/ar/product/18326",
-    soldOut: false,
+    id: 11533,
+    title: "L'Insoumis Ma Force",
+    image:
+      "https://trendatt.com/assets/images/products/min/image_66e93c556a9176650.png",
+      price: "2"
   },
   {
-    title: "Tawaq Perfume - Sold",
-    price: "50",
-    image: "https://trendatt.com/assets/images/products/min/image_67bb8fb669b626978.jpeg",
-    url: "https://trendatt.com/ar/product/18325",
-    soldOut: false,
+      id: 6085,
+      title: "Defender Blue Dark",
+      image: "https://trendatt.com/assets/images/products/min/image_6659ac629299d4891.jpeg",
+      price: "79.47"
+    },
+    {
+      id: 11571,
+      title: "Marie Glam - Hydra Lip Gloss",
+      image: "https://trendatt.com/assets/images/products/min/image_66e99d95302488696.jpeg",
+      price: "2"
+    },
+    {
+      id: 11513,
+      title: "Marie Glam - HD Compact Powder",
+      image: "https://trendatt.com/assets/images/products/min/image_66e8f6a5b2a5e5092.jpeg",
+      price: "3.5"
+    },
+    {
+      id: 12568,
+      title: "Marie Glam - 24 Piece Nail Set",
+      image: "https://trendatt.com/assets/images/products/min/image_66f94dbd7fe624142.jpeg",
+      price: "1"
+    },
+    {
+      id: 6397,
+      title: "Sheikh Al Kar Aleppo Soap",
+      image: "https://trendatt.com/assets/images/products/min/image_665d4c8585d1a6050.jpeg",
+      price: "11.97"
+    },
+    {
+    id: 4335,
+    title: "Bio Natural Vitamin",
+    image: "https://trendatt.com/assets/images/products/min/image_6636004646bca7511.jpeg",
+    price: "8.5",
+    url: "https://trendatt.com/ar/product/4335"
   },
   {
-    title: "Tawaq Perfume - Soul",
-    price: "50",
-    image: "https://trendatt.com/assets/images/products/min/image_67bb8ece20f275613.jpeg",
-    url: "https://trendatt.com/ar/product/18324",
-    soldOut: false,
+    id: 7243,
+    title: "Aqua Di Italia – Shower Gel",
+    image: "https://trendatt.com/assets/images/products/min/image_666d35a8d4bf14661.jpeg",
+    price: "6.25",
+    url: "https://trendatt.com/ar/product/7243"
+  },
+  {
+    id: 6557,
+    title: "Spirit Felici EVERL",
+    image: "https://trendatt.com/assets/images/products/min/image_665eda24e44fd1950.jpeg",
+    price: "25",
+    url: "https://trendatt.com/ar/product/6557"
+  },
+  {
+    id: 6022,
+    title: "Defender M Green for Men",
+    image: "https://trendatt.com/assets/images/products/min/image_66587430a0c895911.jpeg",
+    price: "88.37",
+    url: "https://trendatt.com/ar/product/6022"
+  },
+  {
+    id: 1942,
+    title: "Marie Glam Lashes 110",
+    image: "https://trendatt.com/assets/images/products/min/image_65fe8e8a14efc6292.jpeg",
+    price: "1.5",
+    url: "https://trendatt.com/ar/product/1942"
+  },
+  {
+    id: 7972,
+    title: "Real Techniques Brush Set",
+    image: "https://trendatt.com/assets/images/products/min/image_668436594a8cb3116.jpeg",
+    price: "11.5",
+    url: "https://trendatt.com/ar/product/7972"
   }
 ];
 
 
-products.map(items=> {
+productsData.map(items=> {
   let html = "";
   html = `
-          <div class="col-md-3 col-6 mt-4">
+          <div class="col-md-3 col-6 my-3">
             <div class="brand-card">
             <div class="overflow-hidden">
               <a href="details.html"><img src="${items.image}" class="img-fluid" alt=""></a>
               </div>
               <div class="py-3">
-                             <a href="details.html">${items.title}</a>
+              <a href="details.html">${items.title.split(" ", 2).join(" ")}</a>
               <p class="mt-2">${items.price} KWD</p>
               <div class="d-flex align-items-center justify-content-between mt-4">
               <button class="btn btn-black">Buy Now</button>
@@ -82,20 +140,5 @@ products.map(items=> {
             </div>
           </div>
   `
-  document.querySelector(".brand-parent").innerHTML += html
+  document.querySelector(".bestProduct-parent").innerHTML += html
 })
-
-
-let shopping = document.querySelector(".shopping");
-let closeShopping = document.querySelector(".cart-overlay .close");
-let cartOverlay = document.querySelector(".cart-overlay")
-let cartInner = document.querySelector(".cart-inner")
-shopping.onclick = function () {
-  cartOverlay.classList.add("active")
-  cartInner.classList.add("active")
-}
-
-closeShopping.onclick = function () {
-  cartOverlay.classList.remove("active")
-  cartInner.classList.remove("active")
-}

@@ -1,66 +1,98 @@
-const products = [
+const shaving = [
   {
-    title: "Tawaq Perfume - Mechanos",
-    price: "35",
-    image: "https://trendatt.com/assets/images/products/min/image_67bb93dcdc88b4046.jpeg",
-    url: "https://trendatt.com/ar/product/18330",
-    soldOut: true,
+    id: 17661,
+    title: "Gesky - 6-in-1 Sonic Thermal Face Brush - Black",
+    price: "21.5 KWD",
+    image: "https://trendatt.com/assets/images/products/min/image_677d7599c982f3990.jpeg",
+    url: "https://trendatt.com/ar/product/17661",
+    status: "available"
   },
   {
-    title: "Tawaq Perfume - Peacock",
-    price: "35",
-    image: "https://trendatt.com/assets/images/products/min/image_67bb92fee12df7222.jpeg",
-    url: "https://trendatt.com/ar/product/18329",
-    soldOut: false,
+    id: 14604,
+    title: "Lacabin - Vitamin C Mousse Facial Cleanser 150ml",
+    price: "11.75 KWD",
+    image: "https://trendatt.com/assets/images/products/min/image_67288aa22aed68955.jpeg",
+    url: "https://trendatt.com/ar/product/14604",
+    status: "available"
   },
   {
-    title: "Tawaq Perfume - Fine",
-    price: "35",
-    image: "https://trendatt.com/assets/images/products/min/image_67bb926c3360e1808.jpeg",
-    url: "https://trendatt.com/ar/product/18328",
-    soldOut: true,
+    id: 3041,
+    title: "New Smart - Hand Wash Soap 500ml Green Tea Scent",
+    price: "1.3 KWD",
+    image: "https://trendatt.com/assets/images/products/min/image_6620f472934d34983.jpeg",
+    url: "https://trendatt.com/ar/product/3041",
+    status: "available"
   },
   {
-    title: "Tawaq Perfume - Oudy",
-    price: "20",
-    image: "https://trendatt.com/assets/images/products/min/image_67bb91ca0a1913916.jpeg",
-    url: "https://trendatt.com/ar/product/18327",
-    soldOut: false,
+    id: 16874,
+    title: "Bioderma - Sebium Purifying Foaming Gel, 500ml",
+    price: "13.208 KWD",
+    image: "https://trendatt.com/assets/images/products/min/image_67692d4c88a0f6008.jpeg",
+    url: "https://trendatt.com/ar/product/16874",
+    status: "available"
+  },
+    {
+    title: "Bioderma - Node Shampoo - 200ml",
+    image: "https://trendatt.com/assets/images/products/min/image_6767b1b6323527022.jpeg",
+    price: "4.707 ",
+    url: "https://trendatt.com/ar/product/16841"
   },
   {
-    title: "Tawaq Perfume - Shaky",
-    price: "50",
-    image: "https://trendatt.com/assets/images/products/min/image_67bb912bcc7e13946.jpeg",
-    url: "https://trendatt.com/ar/product/18326",
-    soldOut: false,
+    title: "Be You - Sweet Orange Massage Oil 1L",
+    image: "https://trendatt.com/assets/images/products/min/image_66f33157106c77231.jpeg",
+    price: "15 ",
+    url: "https://trendatt.com/ar/product/12218"
   },
   {
-    title: "Tawaq Perfume - Sold",
-    price: "50",
-    image: "https://trendatt.com/assets/images/products/min/image_67bb8fb669b626978.jpeg",
-    url: "https://trendatt.com/ar/product/18325",
-    soldOut: false,
+    title: "AXIS-Y - Pore Wash with Mugwort Extract - 50ml",
+    image: "https://trendatt.com/assets/images/products/min/image_6741e808b96cf4108.jpeg",
+    price: "5.75 ",
+    url: "https://trendatt.com/ar/product/15053"
   },
   {
-    title: "Tawaq Perfume - Soul",
-    price: "50",
-    image: "https://trendatt.com/assets/images/products/min/image_67bb8ece20f275613.jpeg",
-    url: "https://trendatt.com/ar/product/18324",
-    soldOut: false,
+    title: "Cantu - Sulfate-Free Avocado Shampoo - 400ml",
+    image: "https://trendatt.com/assets/images/products/min/image_6770e513c45d26609.jpeg",
+    price: "4 ",
+    url: "https://trendatt.com/ar/product/17169"
+  },
+  {
+    title: "La Cabin - Collagen Boosting Face Cream 50ml SE",
+    price: "18.75 ",
+    image: "https://trendatt.com/assets/images/products/min/image_6628c18bba2d75623.jpeg",
+    link: "https://trendatt.com/ar/product/3354"
+  },
+  {
+    title: "Bioderma - Atoderm Lipstick 4g",
+    price: "2.035 ",
+    image: "https://trendatt.com/assets/images/products/min/image_67667c8bc6a165978.jpeg",
+    link: "https://trendatt.com/ar/product/16822"
+  },
+  {
+    title: "Sheglam - Good Times Lip Oil Rollerball - Life Apart",
+    price: "1.75 ",
+    image: "https://trendatt.com/assets/images/products/min/image_66d0cb16ba5d41146.jpeg",
+    link: "https://trendatt.com/ar/product/10749"
+  },
+  {
+    title: "BU - Jasmine Massage Oil 3.78L",
+    price: "45 ",
+    image: "https://trendatt.com/assets/images/products/min/image_66f4fb85b73ca6134.jpeg",
+    link: "https://trendatt.com/ar/product/12362"
   }
 ];
 
 
-products.map(items=> {
+
+shaving.map(items=> {
   let html = "";
   html = `
-          <div class="col-md-3 col-6 mt-4">
+          <div class="col-md-3  col-6  my-5">
             <div class="brand-card">
             <div class="overflow-hidden">
-              <a href="details.html"><img src="${items.image}" class="img-fluid" alt=""></a>
+              <a href=""><img src="${items.image}" class="img-fluid" alt=""></a>
               </div>
               <div class="py-3">
-                             <a href="details.html">${items.title}</a>
+              <a href="#">${items.title.split(" ", 5).join(" ")}</a>
               <p class="mt-2">${items.price} KWD</p>
               <div class="d-flex align-items-center justify-content-between mt-4">
               <button class="btn btn-black">Buy Now</button>
@@ -82,20 +114,5 @@ products.map(items=> {
             </div>
           </div>
   `
-  document.querySelector(".brand-parent").innerHTML += html
+  document.querySelector(".shaving").innerHTML += html
 })
-
-
-let shopping = document.querySelector(".shopping");
-let closeShopping = document.querySelector(".cart-overlay .close");
-let cartOverlay = document.querySelector(".cart-overlay")
-let cartInner = document.querySelector(".cart-inner")
-shopping.onclick = function () {
-  cartOverlay.classList.add("active")
-  cartInner.classList.add("active")
-}
-
-closeShopping.onclick = function () {
-  cartOverlay.classList.remove("active")
-  cartInner.classList.remove("active")
-}
