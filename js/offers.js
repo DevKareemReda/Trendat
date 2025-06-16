@@ -88,9 +88,9 @@ offers.map(items=> {
               </div>
               <div class="py-3">
                 <a href="details.html">${items.title}</a>
-                <div class="d-flex align-items-center flex-wrap justify-content-center justify-sm-content-center mt-2">
+                <div class="d-flex align-items-center flex-wrap justify-content-start justify-sm-content-center mt-2">
               <p>${items.originalPrice} KWD</p>
-              <p class="discount ms-sm-4">${items.discountedPrice} KWD</p>
+              <p class="discount ms-4">${items.discountedPrice} KWD</p>
                 </div>
               <div class="d-flex align-items-center justify-content-between mt-4">
               <button class="btn btn-black">Buy Now</button>
